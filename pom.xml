@@ -12,6 +12,7 @@
         <module>taotao-common</module>
         <module>taotao-manager</module>
         <module>taotao-manager-web</module>
+        <module>generator</module>
     </modules>
     <packaging>pom</packaging><!--打包方式-->
 
