@@ -8,11 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="generator" />
         <module name="taotaocommon" />
+        <module name="taotaocontentinterface" />
+        <module name="taotaocontentservice" />
         <module name="taotaomanagerdao" />
         <module name="taotaomanagerinterface" />
         <module name="taotaomanagerpojo" />
         <module name="taotaomanagerservice" />
         <module name="taotaomanagerweb" />
+        <module name="taotaoprotal" />
       </profile>
     </annotationProcessing>
   </component>

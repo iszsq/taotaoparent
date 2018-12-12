@@ -40,5 +40,6 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--mybatis-spring组件的扫描器，com.dao只需要接口（接口方法与sql映射文件中的相同）-->
         <property name="basePackage" value="com.taotao.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 </beans>
