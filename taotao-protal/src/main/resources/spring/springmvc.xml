@@ -10,6 +10,14 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:resource.properties</value>
+            </list>
+        </property>
+    </bean>
+
     <!--使用注解方式搭建-->
     <!--扫描注解-->
     <context:component-scan base-package="com.taotao.protal.controller" />
@@ -22,14 +30,14 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <!--静态资源,不用拦截了-->
+    <!--&lt;!&ndash;静态资源,不用拦截了&ndash;&gt;-->
     <!--<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>-->
     <!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>-->
 
-    <!-- 引用dubbo服务 ，调用者，名字要不一样-->
-    <!--<dubbo:application name="taotao-manager-protal"/>-->
-    <!--<dubbo:registry protocol="zookeeper" address="192.168.6.131:2181"/>-->
-    <!--<dubbo:reference interface="com.taotao.service.TestService" id="testService" />-->
+     <!--引用dubbo服务 ，调用者，名字要不一样-->
+    <dubbo:application name="taotao-manager-protal"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.6.131:2181"/>
+    <dubbo:reference interface="com.taotao.content.service.ContentService" id="contentService" timeout="3000"/>
 
 
 </beans>
